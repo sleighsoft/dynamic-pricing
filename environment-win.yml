@@ -1,0 +1,20 @@
+name: merchant
+channels:
+  - defaults
+  - conda-forge
+  - glemaitre 
+dependencies:
+  - python=3.5.2
+  - numpy
+  - pandas
+  - scipy
+  - scikit-learn
+  - flask
+  - flask-cors
+  - requests
+  - imbalanced-learn
+  - matplotlib
+  - line_profiler
+  - filelock
+  # - xgboost
+  # Follow this to install xgboost http://www.picnet.com.au/blogs/guido/post/2016/09/22/xgboost-windows-x64-binaries-for-download/

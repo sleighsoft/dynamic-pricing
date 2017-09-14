@@ -1,0 +1,19 @@
+name: merchant
+channels:
+  - defaults
+  - conda-forge
+  - glemaitre 
+dependencies:
+  - python=3.5.2
+  - numpy
+  - pandas
+  - scipy
+  - scikit-learn
+  - flask
+  - flask-cors
+  - requests
+  - imbalanced-learn
+  - matplotlib
+  - line_profiler
+  - filelock
+  - xgboost
