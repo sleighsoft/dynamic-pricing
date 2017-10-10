@@ -298,7 +298,7 @@ if __name__ == '__main__':
     situations = load_and_create_training_data(
         market_situation_csv_url,
         buy_offer_csv_url,
-        args.merchant)
+        merchant_id)
 
     if os.path.exists(conf['situations_save_path']) and args.previous:
       print('Loading previous features')
