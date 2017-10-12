@@ -1,6 +1,5 @@
 import xgboost as xgb
 from xgboost.sklearn import XGBClassifier
-import matplotlib.pylab as plt
 import pandas as pd
 
 
@@ -33,13 +32,3 @@ def find_n_estimators(model_params, X, Y, conf):
       metrics='auc',
       early_stopping_rounds=conf['early_stopping_rounds'])
   return {'n_estimators': cvresult.shape[0]}
-
-
-def save_feature_importance(filename, trained_model):
-  """Saves a trained XGBClassifier's feature importances as a bar plot."""
-  if isinstance(trained_model, XGBClassifier):
-    feat_imp = pd.Series(trained_model.get_booster().get_fscore()
-                         ).sort_values(ascending=False)
-    feat_imp.plot(kind='bar', title='Feature Importances')
-    plt.ylabel('Feature Importance Score')
-    plt.savefig(filename)
